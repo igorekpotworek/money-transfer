@@ -2,8 +2,7 @@
 
 The purpose of this project was to create a simple REST API that provides an option to transfer money between bank accounts.
 The whole project was implemented in Java using the Micronaut framework.
-Crucial part - transfer service was implemented using pessimistic locking (repeatable read isolation level is another option). 
-Lock ordering was used to prevent deadlock.
+Crucial part - transfer service was implemented using pessimistic locking. Lock ordering was used to prevent deadlock.
 
 ## Build the project
 ```
