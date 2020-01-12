@@ -26,7 +26,7 @@ The amount needs to be a positive number, all body fields are required.
 Additionally, endpoints to create and retrieve bank accounts were created. 
 The first (POST method) is used to create an account with initial balance (must be positive). 
 After a successful request account object is returned with the generated account id.
-The second (GET method) can be used to retrieve the current balance of the account.
+The second one (GET method) can be used to retrieve the current balance of the account.
 
 ### Create account
 ```
