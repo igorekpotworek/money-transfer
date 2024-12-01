@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: money-transfer
+
+datasources:
+  default:
+    url: jdbc:h2:mem:default;INIT=RUNSCRIPT FROM 'classpath:schema.sql'
+    driverClassName: org.h2.Driver
+    dialect: H2
+
+account:
+  uri: accounts
+
+transfer:
+  uri: transfers

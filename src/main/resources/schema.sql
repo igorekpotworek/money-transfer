@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS account (
+   id VARCHAR(36) PRIMARY KEY,
+   balance DECIMAL NOT NULL
+);
