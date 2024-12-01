@@ -32,11 +32,23 @@ dependencies {
     runtimeOnly "com.h2database:h2"
     runtimeOnly "ch.qos.logback:logback-classic"
     runtimeOnly "io.micronaut.sql:micronaut-jdbc-hikari"
-    runtimeOnly 'io.micronaut:micronaut-jackson-databind'
+    runtimeOnly "io.micronaut:micronaut-jackson-databind"
+    runtimeOnly "org.yaml:snakeyaml"
 
     testImplementation "io.micronaut:micronaut-http-client"
     testImplementation "org.spockframework:spock-core"
     testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.apache.groovy:groovy-all:4.0.24"
     testImplementation "io.micronaut.test:micronaut-test-spock"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "started", "passed", "skipped", "failed"
+    }
+}
+
+application {
+    mainClass.set("revolut.transfer.Application")
 }

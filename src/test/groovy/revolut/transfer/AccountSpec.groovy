@@ -15,7 +15,7 @@ import static io.micronaut.http.HttpStatus.*
 import static java.util.UUID.randomUUID
 
 @MicronautTest
-class AccountTest extends Specification {
+class AccountSpec extends Specification {
 
     @Inject
     @Client('/')

@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11-openj9:jdk-11.0.1.13-alpine-slim
+FROM openjdk:21-jdk
 COPY build/libs/money-transfer-*-all.jar money-transfer.jar
 EXPOSE 8080
-CMD java -Dcom.sun.management.jmxremote -noverify ${JAVA_OPTS} -jar money-transfer.jar
+ENTRYPOINT ["java","-jar","/money-transfer.jar"]
